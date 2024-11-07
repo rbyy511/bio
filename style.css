@@ -1,0 +1,414 @@
+*, html, body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-bg: lightgray;
+  --secondary-bg: rgb(28, 105, 143);
+  --hover-sec-bg: rgb(14, 117, 168);
+}
+
+.background-top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  filter: blur(.6px);
+}
+
+/* Style untuk section Selamat Datang */
+.introduction {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Fira Sans", sans-serif;
+}
+
+.introduction h2 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-top: -89px;
+}
+
+.introduction p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.introduction-description {
+  text-align: left;
+}
+
+.about-me {
+  color: #333;
+  margin-top: -50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.about-me-content {
+  display: flex; /* Menggunakan flexbox untuk menampilkan gambar dan teks berdampingan */
+}
+
+.about-me-image {
+  width: 150px; /* Lebar gambar */
+  height: 150px; /* Tinggi gambar */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi dan memenuhi area */
+  border-radius: 8px; /* Sudut membulat untuk gambar */
+  margin-right: 15px; /* Jarak antara gambar dan teks */
+  float: left; /* Mengapungkan gambar ke kiri untuk membuat teks mengelilinginya */
+  clear: left; /* Mencegah elemen lain dari mengalir ke kiri gambar */
+}
+
+/* Media Query untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+  .about-me-content {
+      flex-direction: column; /* Mengubah arah flex menjadi kolom */
+      align-items: center; /* Mengatur teks agar berada di tengah */
+  }
+
+  .about-me-image {
+      width: 100%; /* Mengatur lebar gambar menjadi 100% */
+      height: auto; /* Menjaga proporsi gambar */
+      margin: 0 0 15px 0; /* Menghilangkan margin kanan dan menambahkan margin bawah */
+  }
+
+  .about-me-text {
+      width: 100%; /* Mengatur lebar teks menjadi 100% */
+      text-align: left; /* Mengatur teks ke kiri */
+  }
+}
+
+
+/* Styling untuk Skills section */
+.skills {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.skills h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.skills ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.skills li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.skills p {
+  margin-top: 20px;
+}
+
+/* Styling untuk Portfolio section */
+.portfolio {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.portfolio-item {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.portfolio-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.portfolio-item a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+  color: #004a99;
+}
+
+/* Styling untuk wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center; /* Mengatur agar elemen di dalam wrapper berada di tengah */
+  flex-wrap: wrap; /* Agar elemen bisa melipat jika terlalu sempit */
+  width: 90%; /* Menentukan lebar wrapper agar lebih kecil dari 100% */
+  max-width: 1200px; /* Menentukan lebar maksimum wrapper */
+  margin: 0 auto; /* Mengatur margin otomatis agar berada di tengah */
+  height: auto;
+  color: white;
+  padding: 20px 0; /* Memberikan padding atas dan bawah */
+}
+
+
+.card {
+  background-color: var(--secondary-bg);
+  text-align: center;
+  padding: 20px;
+  margin: 10px; /* Mengurangi margin agar lebih rapat */
+  width: calc(25% - 20px); /* Menentukan lebar kartu */
+  min-width: 200px; /* Lebar minimum untuk kartu */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--hover-sec-bg);
+  color: #333;
+}
+
+.icons {
+  font-size: 42px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 11px;
+}
+
+/* Styling untuk navbar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: white; /* Sesuaikan dengan tinggi navbar */
+  margin-bottom: 100px;
+}
+
+/* Styling untuk footer */
+footer {
+  background-color: #333; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks */
+  text-align: center; /* Teks di tengah */
+  padding: 20px 0; /* Ruang di dalam footer */
+  font-family: Arial, sans-serif; /* Font untuk teks */
+}
+
+/* Styling untuk paragraf di footer */
+footer p {
+  margin: 5px 0; /* Memberikan jarak antara teks */
+}
+
+/* Styling untuk link sosial media di footer */
+footer a {
+  color: #ffcc00; /* Warna link */
+  text-decoration: none; /* Hilangkan garis bawah pada link */
+  margin: 0 10px; /* Memberi ruang antar link */
+}
+
+/* Mengubah warna link saat hover */
+footer a:hover {
+  color: #ffffff; /* Mengubah warna saat mouse hover */
+}
+
+@media (max-width: 768px) {
+  .footer {
+      display: flex; /* Menggunakan flexbox untuk responsivitas */
+      justify-content: center; /* Mengatur agar teks berada di tengah */
+      align-items: center; /* Memastikan teks berada di tengah secara vertikal */
+  }
+
+  .footer p {
+      width: 100%; /* Memastikan teks menggunakan lebar penuh di mode mobile */
+  }
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+  .skills, .portfolio {
+      padding: 20px;
+  }
+
+  .portfolio-item {
+      padding: 20px;
+  }
+
+  .form {
+      width: 90%;
+  }
+
+  footer {
+      text-align: left; /* Teks rata kiri pada layar kecil */
+      padding: 15px; /* Padding lebih kecil untuk layar kecil */
+  }
+
+  footer a {
+      display: block; /* Link tampil vertikal pada layar kecil */
+      margin: 10px 0; /* Jarak antar link */
+  }
+
+  .card {
+      width: calc(50% - 20px); /* Mengubah lebar kartu di layar kecil */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+      font-size: 14px; /* Ukuran font lebih kecil */
+      width: 100%; /* Lebar penuh untuk kartu di layar kecil */
+  }
+
+  .icons {
+      font-size: 36px; /* Ukuran ikon lebih kecil */
+  }
+}
+
+.div p {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.introduction, .about-me {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang */
+  border-radius: 8px; /* Sudut membulat */
+}
+
+.introduction h2, .about-me h2 {
+  color: var(--secondary-bg); /* Menggunakan variabel warna */
+}
+
+/* Styling untuk bagian Hubungi Saya */
+.contact {
+  padding: 60px; /* Ruang atas dan bawah */
+  background-color: #f3f4f6; /* Warna latar belakang */
+  text-align: center; /* Teks di tengah */
+  border-radius: 10px; /* Sudut membulat */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan */
+  margin: 20px auto; /* Memusatkan bagian dengan margin otomatis */
+  max-width: 800px; /* Lebar maksimum untuk bagian */
+}
+
+.contact h2 {
+  color: var(--secondary-bg); /* Menggunakan variabel warna */
+  margin-bottom: 10px; /* Jarak bawah untuk heading */
+  font-size: 2rem; /* Ukuran font untuk heading */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+}
+
+.contact p {
+  font-size: 1.1rem; /* Ukuran font untuk deskripsi */
+  color: #555; /* Warna teks */
+  margin-bottom: 30px; /* Jarak bawah deskripsi */
+}
+
+/* Styling untuk form */
+.contact-form {
+  max-width: 100%; /* Lebar maksimum form mengikuti kontainer */
+  margin: 0 auto; /* Memusatkan form */
+  background-color: white; /* Warna latar belakang form */
+  padding: 30px; /* Ruang di dalam form */
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Bayangan pada form */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 24px); /* Lebar penuh minus padding */
+  padding: 12px; /* Ruang di dalam input */
+  margin-bottom: 20px; /* Jarak bawah */
+  border: 2px solid #ccc; /* Garis tepi */
+  border-radius: 4px; /* Sudut membulat */
+  transition: border-color 0.3s; /* Transisi warna garis tepi */
+  box-sizing: border-box; /* Menjaga padding dalam perhitungan lebar */
+}
+
+.contact-form textarea {
+  resize: none; /* Mencegah perubahan ukuran textarea */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--secondary-bg); /* Warna garis tepi saat fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+.contact-form button {
+  background-color: var(--secondary-bg); /* Warna tombol */
+  color: white; /* Warna teks tombol */
+  padding: 12px 20px; /* Ruang dalam tombol */
+  border: none; /* Menghilangkan garis tepi */
+  border-radius: 4px; /* Sudut membulat */
+  cursor: pointer; /* Pointer saat hover */
+  font-size: 1rem; /* Ukuran font tombol */
+  transition: background-color 0.3s, transform 0.3s; /* Efek transisi */
+}
+
+.contact-form button:hover {
+  background-color: var(--hover-sec-bg); /* Warna saat hover */
+  transform: translateY(-2px); /* Efek angkat saat hover */
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+  .contact {
+      padding: 40px; /* Padding lebih kecil untuk layar kecil */
+  }
+
+  .contact-form {
+      padding: 20px; /* Padding lebih kecil untuk form */
+  }
+  .nama {
+    text-align: center;
+  }
+}
+
+.nama {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
